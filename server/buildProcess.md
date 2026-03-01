@@ -122,4 +122,8 @@ git push -u origin main
 
 <!-- Frontend Installation and Packages -->
 1) Setup clinet(frontend) directory and initialize tools : npx create-react-app client
-  
+2) Go to client folder : cd client
+3) Install client packages : npm i react-redux @reduxjs/toolkit react-datepicker react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid @nivo/core @nivo/bar @nivo/geo @nivo/pie
+***Atually we will used package.json by EdRoh will better API environment to study case***
+4) Install tools from {package.json} that file located : npm install
+5) Create {jsconfig.json}
