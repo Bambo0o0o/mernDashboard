@@ -84,4 +84,4 @@ git push -u origin main
 5) Configuration routes : clientRoutes, generalRoutes, managementRoutes, salesRoutes
 6) Adding routes folder in server folder
 7) Create {route files} to routes folder : client.js, general.js, management.js, sales.js
-8) Configuration route files with : express.Router()
+8) Init Configuration route files with : express.Router()
