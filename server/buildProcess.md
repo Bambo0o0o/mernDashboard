@@ -127,4 +127,8 @@ git push -u origin main
 4) Install old version datepicker : npm i --force react-datepicker@4.8.0
 5) Delete others file left only : App.js, index.js, index.css
 6) Create {jsconfig.json}
-7) 
+7) Create {theme.js} in src folder
+   1) For one color code we can shady it by tailwind shades
+   2) By select all color code then : #666666
+   3) Using tailwind Shades with key : ctrl+k --> ctrl+g
+8) Just copy data from {theme.js} by EdRoh to our {theme.js}
