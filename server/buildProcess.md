@@ -1,5 +1,7 @@
 # Build MERN React Admin dashboard
 
+Last building time : 21:02
+
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
 
@@ -19,6 +21,7 @@ git push -u origin main
 <!-- Comment shortkey VSCODE-->
    1) For line comment : Ctrl + /
    2) For block comments : Shift + Alt + A
+   3) Run server : npm run dev
 
  <!-- Tools for project -->
     Node: <https://nodejs.org/en/download/>
@@ -69,7 +72,7 @@ git push -u origin main
 
 <!-- Backend Packages and Installations -->
 1) Create server directory :
-   - Create server directory : mkdir server
+   - Create server(Backend) directory : mkdir server
    - Go to server directory : cd server
    - Adding initial {package.json} : npm init -y
 2) Setup server tools : npm i express body-parser cors dotenv helmet morgan mongoose nodemon
@@ -116,4 +119,7 @@ git push -u origin main
 ***Got error : Error: querySrv ECONNREFUSED _mongodb._tcp.dashboard0.7a9g7jo.mongodb.net did not connect***
    <!-- Solve by -->
    1) Install Node 18.20.8 version
+
+<!-- Frontend Installation and Packages -->
+1) Setup clinet(frontend) directory and initialize tools : npx create-react-app client
   
