@@ -149,7 +149,7 @@ git push -u origin main
 <!-- Create Mode dark and light -->
 1) Create state folder in src folder
 2) Create {index.js} in state folder
-3) Create Dark/Light mode from reduxjs/toolkit
+3) Create Dark/Light mode from reduxjs/toolkit in {index.js}
 
 <!-- Create API state -->
 1) Create {api.js} file in state folder
@@ -158,3 +158,12 @@ git push -u origin main
 <!-- Create geoData state -->
 1) Create {geoData.js} file in state folder
 2) Adding geoData from EdRoh to {geoData.js}
+
+<!-- Go to main frontend index.js in client folder -->
+1) On index.js import things : configureStore, globalReducer, Provider, setupListeners, api
+2) On index.js setup configureStore()
+3) On index.js adding Provider store to ReactDom.createRoot
+
+<!-- Go to main frontend App.js in client folder -->
+1) On App.js import things : CssBaseline, ThemeProvider, createTheme, useMemo, useSelector, BrowserRouter, , Navigate, Route, Routes, themeSettings, Layout, Dashboard, Products, Customers, Transactions, Geography, Overview, Daily, Monthly, Breakdown, Admin, Performance
+2) Create routes function to : /, dashboard, products, customers, transactions, geography, overview, daily, monthly, breakdown, admin, performance
