@@ -103,3 +103,10 @@ git push -u origin main
    2) PORT : 5001
 4) Create {.gitignore} to be necklect upload file list to gitHub or repository
    1) Adding necklect list : /node_modules and .env
+5) Go to {package.json} then adding :
+   1) Adding "type" under "main" : "type":"module",        //To allow us to used imported on index.js file
+   2) Adding "start" and "dev" inside "scripts" : 
+      - "start":"node index.js"
+      - "dev":nodemon index.js"
+   3) Delete "type" under "license" : "type": "commonjs",
+  
