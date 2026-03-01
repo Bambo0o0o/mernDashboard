@@ -85,3 +85,21 @@ git push -u origin main
 6) Adding routes folder in server folder
 7) Create {route files} to routes folder : client.js, general.js, management.js, sales.js
 8) Init Configuration route files with : express.Router()
+9) Adding folders in server folder : controllers, data, models
+10) Create controller files as route files : client.js, general.js, management.js, sales.js
+
+<!-- MongoDB Installation and Setup -->
+1) Go to mogoDB signUp and signIn with atlas
+   1) Username : devillasu_db_user
+   2) password : xMO4PrLgpLYosQwK
+   3) Connect method : Driver
+   4) Connection from : Local environment
+   5) IP Access list : Add My Current IP Address
+   6) Driver : NodeJS
+   7) Link : mongodb+srv://devillasu_db_user:xMO4PrLgpLYosQwK@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
+2) Create {.env} file in server folder
+3) Adding :
+   1) MONGO_URL : mongodb+srv://devillasu_db_user:xMO4PrLgpLYosQwK@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
+   2) PORT : 5001
+4) Create {.gitignore} to be necklect upload file list to gitHub or repository
+   1) Adding necklect list : /node_modules and .env
