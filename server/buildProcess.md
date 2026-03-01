@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 21:02
+Last building time : 32:27
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -115,7 +115,7 @@ git push -u origin main
 ***Testing run server : npm run dev***
 
 <!-- Backend Configuration and Setup(Cont.) -->
-1) Setup mongoose on {index.js} 
+1) Setup mongoose on {index.js}
 ***Got error : Error: querySrv ECONNREFUSED _mongodb._tcp.dashboard0.7a9g7jo.mongodb.net did not connect***
    <!-- Solve by -->
    1) Install Node 18.20.8 version
@@ -127,8 +127,22 @@ git push -u origin main
 4) Install old version datepicker : npm i --force react-datepicker@4.8.0
 5) Delete others file left only : App.js, index.js, index.css
 6) Create {jsconfig.json}
-7) Create {theme.js} in src folder
+
+<!-- set up Colors and MUI Light and Dark Mode Themes -->
+1) Create {theme.js} in src folder
    1) For one color code we can shady it by tailwind shades
    2) By select all color code then : #666666
    3) Using tailwind Shades with key : ctrl+k --> ctrl+g
-8) Just copy data from {theme.js} by EdRoh to our {theme.js}
+2) Just copy data from EdRoh to our {theme.js} : <https://github.com/ed-roh/fullstack-admin/blob/master/client/src/theme.js>
+3) Create assets to store profile picture : profile.jpeg
+
+<!-- Backend Configuration and Setup(Cont.) -->
+1) Inside data folder create {index.js} file
+2) Copy sorce data from EdRoh to there : <https://github.com/ed-roh/fullstack-admin/blob/master/server/data/index.js>
+
+<!-- Set font from google font : inter family -->
+1) Go to google font with inter family : <https://fonts.google.com/specimen/Inter?query=inter>
+2) Copy embed code from @import within style taq
+3) Place that @import code to {index.css}
+4) Add default setting to {index.css} file : html,body,#root,.app{}
+5) 
