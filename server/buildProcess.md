@@ -91,15 +91,15 @@ git push -u origin main
 <!-- MongoDB Installation and Setup -->
 1) Go to mogoDB signUp and signIn with atlas
    1) Username : devillasu_db_user
-   2) password : xMO4PrLgpLYosQwK
+   2) password : ya1UNXwvO9mb6LPL
    3) Connect method : Driver
    4) Connection from : Local environment
    5) IP Access list : Add My Current IP Address
    6) Driver : NodeJS
-   7) Link : mongodb+srv://devillasu_db_user:xMO4PrLgpLYosQwK@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
+   7) Link : mongodb+srv://devillasu_db_user:rmBK7Ut9nmzNy2fY@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
 2) Create {.env} file in server folder
 3) Adding :
-   1) MONGO_URL : mongodb+srv://devillasu_db_user:xMO4PrLgpLYosQwK@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
+   1) MONGO_URL : mongodb+srv://devillasu_db_user:rmBK7Ut9nmzNy2fY@dashboard0.7a9g7jo.mongodb.net/?appName=dashboard0
    2) PORT : 5001
 4) Create {.gitignore} to be necklect upload file list to gitHub or repository
    1) Adding necklect list : /node_modules and .env
@@ -115,7 +115,5 @@ git push -u origin main
 1) Setup mongoose on {index.js} 
 ***Got error : Error: querySrv ECONNREFUSED _mongodb._tcp.dashboard0.7a9g7jo.mongodb.net did not connect***
    <!-- Solve by -->
-   1) Go to mongoDB atlas select cluster
-   2) Select Browse collection
-   3) Waiting for database connected
+   1) Install Node 18.20.8 version
   

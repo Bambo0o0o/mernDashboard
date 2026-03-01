@@ -14,7 +14,7 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 /* Configuration Tools*/
-dotenv.config();
+dotenv.config({ quiet: true });
 const app = express();
 app.use(express.json());
 app.use(helmet());
@@ -34,11 +34,7 @@ app.use("/sales", salesRoutes);
 
 /* Mongoose Setup */
 const PORT = process.env.PORT || 9000;          //process.env. allow us to acces .env file
-mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
