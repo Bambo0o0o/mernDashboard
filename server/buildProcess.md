@@ -145,4 +145,10 @@ git push -u origin main
 2) Copy embed code from @import within style taq
 3) Place that @import code to {index.css}
 4) Add default setting to {index.css} file : html,body,#root,.app{}
-5) 
+
+<!-- Create Mode dark and light -->
+1) Create state folder in src folder
+2) Create {index.js} in state folder
+3) Create Dark/Light mode from reduxjs/toolkit
+
+<!--  -->
