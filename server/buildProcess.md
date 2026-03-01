@@ -17,8 +17,8 @@ git branch -M main
 git push -u origin main
 
 <!-- Comment shortkey VSCODE-->
-   - For line comment : Ctrl + /	
-   - For block comments : Shift + Alt + A
+   1) For line comment : Ctrl + /
+   2) For block comments : Shift + Alt + A
 
  <!-- Tools for project -->
     Node: <https://nodejs.org/en/download/>
@@ -105,8 +105,17 @@ git push -u origin main
    1) Adding necklect list : /node_modules and .env
 5) Go to {package.json} then adding :
    1) Adding "type" under "main" : "type":"module",        //To allow us to used imported on index.js file
-   2) Adding "start" and "dev" inside "scripts" : 
+   2) Adding "start" and "dev" inside "scripts" :
       - "start":"node index.js"
       - "dev":nodemon index.js"
    3) Delete "type" under "license" : "type": "commonjs",
+***Testing run server : npm run dev***
+
+<!-- Backend Configuration and Setup(Cont.) -->
+1) Setup mongoose on {index.js} 
+***Got error : Error: querySrv ECONNREFUSED _mongodb._tcp.dashboard0.7a9g7jo.mongodb.net did not connect***
+   <!-- Solve by -->
+   1) Go to mongoDB atlas select cluster
+   2) Select Browse collection
+   3) Waiting for database connected
   
