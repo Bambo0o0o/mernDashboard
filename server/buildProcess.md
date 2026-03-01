@@ -151,4 +151,10 @@ git push -u origin main
 2) Create {index.js} in state folder
 3) Create Dark/Light mode from reduxjs/toolkit
 
-<!--  -->
+<!-- Create API state -->
+1) Create {api.js} file in state folder
+2) Adding API data from EdRoh to {api.js}
+
+<!-- Create geoData state -->
+1) Create {geoData.js} file in state folder
+2) Adding geoData from EdRoh to {geoData.js}
