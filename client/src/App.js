@@ -18,7 +18,7 @@ import Admin from "scenes/admin";
 import Performance from "scenes/performance";
 
 function App() {
-  const mode = useSelector((state) => state.global.mode);
+  const mode = useSelector((state) => state.global.mode);                     //Adding light/dark mode function
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
     <div className="app">

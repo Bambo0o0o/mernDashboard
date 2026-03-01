@@ -1,6 +1,17 @@
+// {
+//   "compilerOptions": {
+//     "baseUrl": "src"
+//   },
+//   "include": ["src"]
+// }
+
+// Solver deprecated by 
 {
   "compilerOptions": {
-    "baseUrl": "src"
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }

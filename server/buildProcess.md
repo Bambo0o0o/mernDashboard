@@ -164,6 +164,19 @@ git push -u origin main
 2) On index.js setup configureStore()
 3) On index.js adding Provider store to ReactDom.createRoot
 
-<!-- Go to main frontend App.js in client folder -->
+<!-- Complete App.js in client folder -->
 1) On App.js import things : CssBaseline, ThemeProvider, createTheme, useMemo, useSelector, BrowserRouter, , Navigate, Route, Routes, themeSettings, Layout, Dashboard, Products, Customers, Transactions, Geography, Overview, Daily, Monthly, Breakdown, Admin, Performance
-2) Create routes function to : /, dashboard, products, customers, transactions, geography, overview, daily, monthly, breakdown, admin, performance
+2) Create route paths to : /, dashboard, products, customers, transactions, geography, overview, daily, monthly, breakdown, admin, performance
+
+<!-- Create Dashboard scenes -->
+1) Create scenes folder in src folder
+2) Create dashboard folder in scenes folder
+3) Create {index.jsx} in dashboard folder
+4) Using intellisence of vscode "rafce" on {index.jsx} file
+5) Then complete Adding code from EdRoh
+
+<!-- Create Layout scenes -->
+1) Create layout folder in scenes folder
+2) Create {index.jsx} in scenes folder
+3) Then complete Adding code from EdRoh
+
