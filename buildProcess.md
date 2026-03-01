@@ -16,6 +16,10 @@ git remote add origin https://github.com/Bambo0o0o/mernDashboard.git
 git branch -M main
 git push -u origin main
 
+<!-- Comment shortkey VSCODE-->
+   - For line comment : Ctrl + /	
+   - For block comments : Shift + Alt + A
+
  <!-- Tools for project -->
     Node: <https://nodejs.org/en/download/>
     NPX: <https://www.npmjs.com/package/npx>
@@ -75,4 +79,9 @@ git push -u origin main
 <!-- Backend Configuration and Setup -->
 1) Create {index.js} in server folder : touch index.js
 2) import tools : express body-parser cors dotenv helmet morgan mongoose
-3) Configuration tools 
+3) Configuration tools : express body-parser cors dotenv helmet morgan mongoose
+4) Import routes : clientRoutes, generalRoutes, managementRoutes, salesRoutes
+5) Configuration routes : clientRoutes, generalRoutes, managementRoutes, salesRoutes
+6) Adding routes folder in server folder
+7) Create {route files} to routes folder : client.js, general.js, management.js, sales.js
+8) Configuration route files with : express.Router()
