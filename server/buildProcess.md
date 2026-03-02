@@ -1,9 +1,10 @@
 # Build MERN React Admin dashboard
 
-Last building time : 32:27
+Last building time : 45:18
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
+***.JSON file don't have any comment track***
 
 <!-- Create new GitHub -->
 echo "# mernDashboard" >> README.md
@@ -168,15 +169,17 @@ git push -u origin main
 1) On App.js import things : CssBaseline, ThemeProvider, createTheme, useMemo, useSelector, BrowserRouter, , Navigate, Route, Routes, themeSettings, Layout, Dashboard, Products, Customers, Transactions, Geography, Overview, Daily, Monthly, Breakdown, Admin, Performance
 2) Create route paths to : /, dashboard, products, customers, transactions, geography, overview, daily, monthly, breakdown, admin, performance
 
-<!-- Create Dashboard scenes -->
+<!-- Create Dashboard : Scenes -->
 1) Create scenes folder in src folder
 2) Create dashboard folder in scenes folder
 3) Create {index.jsx} in dashboard folder
 4) Using intellisence of vscode "rafce" on {index.jsx} file
 5) Then complete Adding code from EdRoh
 
-<!-- Create Layout scenes -->
-1) Create layout folder in scenes folder
-2) Create {index.jsx} in scenes folder
-3) Then complete Adding code from EdRoh
+<!-- Create Layout : Scenes -->
+1) Test run : npm run start               //Don't turn on other modules otherwise it will get error
+2) Create layout folder in scenes folder
+3) Create {index.jsx} in scenes folder
+4) Then complete Adding code from EdRoh
 
+<!-- Create Layout : Scenes -->
