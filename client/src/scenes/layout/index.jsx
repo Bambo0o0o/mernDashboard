@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, useMediaQuery } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import Navbar from "components/Navbar";
+import Navbar from "components/Navbar";
 // import Sidebar from "components/Sidebar";
 import { useGetUserQuery } from "state/api";
 
@@ -22,11 +22,12 @@ const Layout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       /> */}
       <Box flexGrow={1}>
-        {/* <Navbar
+        {/* Top page with : Search-Setting-Profile */}
+        <Navbar
           user={data || {}}
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
-        /> */}
+        />
         <Outlet />
       </Box>
     </Box>

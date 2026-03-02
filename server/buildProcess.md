@@ -177,9 +177,12 @@ git push -u origin main
 5) Then complete Adding code from EdRoh
 
 <!-- Create Layout : Scenes -->
-1) Test run : npm run start               //Don't turn on other modules otherwise it will get error
-2) Create layout folder in scenes folder
-3) Create {index.jsx} in scenes folder
-4) Then complete Adding code from EdRoh
+1) Test run : npm run start                             //Don't turn on other modules otherwise it will get error
+2) Create {FlexBetween.jsx} in components folder        // Setup to get space between left-right of Navebar
+3) Adding Box and Styled to {FlexBetween.jsx}
+4) Adding {Navbar.jsx} in components folder
+5) Create layout folder in scenes folder
+6) Create {index.jsx} in scenes folder
+7) Then complete Adding code from EdRoh
 
 <!-- Create Layout : Scenes -->
