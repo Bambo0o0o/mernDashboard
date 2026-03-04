@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 45:18
+Last building time : 1:01:56
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -127,7 +127,7 @@ git push -u origin main
 3) Install client packages : npm i react-redux @reduxjs/toolkit react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid @nivo/core @nivo/bar @nivo/geo @nivo/pie
 4) Install old version datepicker : npm i --force react-datepicker@4.8.0
 5) Delete others file left only : App.js, index.js, index.css
-6) Create {jsconfig.json}
+6) Create {jsconfig.json} using {"ignoreDeprecations": "6.0"} to ignore baseURL deprecated
 
 <!-- set up Colors and MUI Light and Dark Mode Themes -->
 1) Create {theme.js} in src folder
@@ -183,6 +183,10 @@ git push -u origin main
 4) Adding {Navbar.jsx} in components folder
 5) Create layout folder in scenes folder
 6) Create {index.jsx} in scenes folder
-7) Then complete Adding code from EdRoh
+7) Import Navebar and Sidebar to {index.jsx} of layout folders
+8) Setup Navbar and Sidebar on {index.jsx}
+9) Adding {Sidebar.jsx} in components folder
+10) Setup {Sidebar.jsx}
+11) Then complete Adding code from EdRoh
 
 <!-- Create Layout : Scenes -->
