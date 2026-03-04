@@ -7,6 +7,7 @@ import Sidebar from "components/Sidebar";
 import { useGetUserQuery } from "state/api";
 
 const Layout = () => {
+  // Create Closed-Expanded Sidebar(Burger button)
   const isNonMobile = useMediaQuery("(min-width: 600px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
@@ -14,6 +15,7 @@ const Layout = () => {
 
   return (
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
+      {/* Adding Closed-Expanded function */}
       <Sidebar
         user={data || {}}
         isNonMobile={isNonMobile}
@@ -25,6 +27,7 @@ const Layout = () => {
         {/* Top page with : Search-Setting-Profile */}
         <Navbar
           user={data || {}}
+          // Adding Burger button to Closed and Expanded Sidebar
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />

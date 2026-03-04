@@ -187,6 +187,7 @@ git push -u origin main
 8) Setup Navbar and Sidebar on {index.jsx}
 9) Adding {Sidebar.jsx} in components folder
 10) Setup {Sidebar.jsx}
-11) Then complete Adding code from EdRoh
+11) Making comments element on Sidebar code : <https://mui.com/material-ui/react-drawer/>
+12) Then complete Adding code from EdRoh
 
 <!-- Create Layout : Scenes -->
