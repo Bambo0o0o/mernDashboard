@@ -125,7 +125,7 @@ const Sidebar = ({
           variant="persistent"
           anchor="left"
 
-          // Adding on Timestamp : 1:14:31
+          // Setup Decorative
           sx={{
             width: drawerWidth,
             "& .MuiDrawer-paper": {
@@ -153,7 +153,6 @@ const Sidebar = ({
                 )}
               </FlexBetween>
             </Box>
-            {/* Adding Sidebar List name */}
             <List>
               {navItems.map(({ text, icon }) => {
                 if (!icon) {
@@ -163,6 +162,7 @@ const Sidebar = ({
                     </Typography>
                   );
                 }
+                // Set Navigation to URL which what active by onClick : /customers or /transactions etc.
                 const lcText = text.toLowerCase();
 
                 return (
@@ -172,6 +172,7 @@ const Sidebar = ({
                         navigate(`/${lcText}`);
                         setActive(lcText);
                       }}
+                      // Setup Decorative
                       sx={{
                         backgroundColor:
                           active === lcText
@@ -184,6 +185,7 @@ const Sidebar = ({
                       }}
                     >
                       <ListItemIcon
+                        // Setup Decorative
                         sx={{
                           ml: "2rem",
                           color:
