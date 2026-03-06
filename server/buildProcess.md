@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 1:01:56
+Last building time : 1:41:27
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -189,5 +189,32 @@ git push -u origin main
 10) Setup {Sidebar.jsx}
 11) Making comments element on Sidebar code : <https://mui.com/material-ui/react-drawer/>
 12) Then complete Adding code from EdRoh
+
+<!-- RTK Query and injecting mock data into MongoDB -->
+<!-- Create User field to support User data -->
+1) Create User information to User profile on {index.js} in state folder
+    1) Sending UserId to backend and backend
+    2) Backend sending User information to Navbar and show it.
+    3) Adding UserID under dark mode : userId: "63701cc1f03239b7f700000e",
+2) Go to {general.js} in routes folder
+3) Create UserId to support input UserId to backend :
+    1) Import { getUser, getDashboardStats }
+    2) Making route path to push/pull userId from backend : route.get("/user/:id)
+    3) Go to models folder create {User.js} in there
+    4) Create user schema in {User.js} with mongoose to support User fields which contains : name, email, password, address, occupation, contact, transaction, role and timestamp
+    ***Schema is a format which database will check is field in there must be correct format***
+4) Go to {general.js} in controllers folder
+    1) Import {User.js} from models folder
+    2) Setup async function with request and response for manipulate User fields in database
+    3) Create catch up error
+5) Adding User information which prepare on {index.js} in data folder to MongoDB
+    1) Setup {index.js} in server folder to import raw User data in one time to MongoDb
+    2) Unmark track to add User to database : User.insertMany(dataUser)
+    3) Start backend server : npm run dev
+   ***Get error : errors:496 ErrorCaptureStackTrace(err), Error [ERR_MODULE_NOT_FOUND]: Cannot find module***
+      Solve err : corrected path of general.js on controllers folder which missed spell as "contollers"
+   ***Get error : E11000 duplicate key error collection:***
+      Solver err : Cancel duplicate userID
+    4) Delete previous data on mongoDB and run again : npm run dev
 
 <!-- Create Layout : Scenes -->
