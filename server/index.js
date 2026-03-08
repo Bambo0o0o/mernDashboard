@@ -52,8 +52,8 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    /* ONLY ADD DATA ONE TIME */
-    User.insertMany(dataUser);
+    /* ONLY ADD DATA ONE TIME ---> Close it after used onetime by "ctrl + /"*/
+    // User.insertMany(dataUser);
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);

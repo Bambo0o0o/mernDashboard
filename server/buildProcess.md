@@ -23,6 +23,7 @@ git push -u origin main
    1) For line comment : Ctrl + /
    2) For block comments : Shift + Alt + A
    3) Run server : npm run dev
+   4) Run client : npm start
 
  <!-- Tools for project -->
     Node: <https://nodejs.org/en/download/>
@@ -209,12 +210,30 @@ git push -u origin main
     3) Create catch up error
 5) Adding User information which prepare on {index.js} in data folder to MongoDB
     1) Setup {index.js} in server folder to import raw User data in one time to MongoDb
-    2) Unmark track to add User to database : User.insertMany(dataUser)
+      ***Remind this below track target used onetime after upload to MongoDB must be markdown on code**
+    2) Unmark track to add User to database : User.insertMany(dataUser), here with link <D:\WorkShop\MERN\Me simple app\MERN Dashboard\mernDashboard\server\index.js>
+      ***Code above must markdown at 1:41:20 before run server on index.js in server folder : npm run dev**
     3) Start backend server : npm run dev
    ***Get error : errors:496 ErrorCaptureStackTrace(err), Error [ERR_MODULE_NOT_FOUND]: Cannot find module***
       Solve err : corrected path of general.js on controllers folder which missed spell as "contollers"
    ***Get error : E11000 duplicate key error collection:***
       Solver err : Cancel duplicate userID
-    4) Delete previous data on mongoDB and run again : npm run dev
-
+    4) We can check existing userID on client side from index.js in state folder on find tab of MongoDb with syntax as: {_id: ObjectId('63701cc1f03239b7f700000e')} --> then press find or enter
+6) Setup API Free call to the backend using redux-toolkit
+   1) Create {api.js} in state folder
+   2) Import createApi, fetchBaseQuery from redux-toolkit
+   3) Create functions as :
+         createApi,
+         useGetUserQuery,
+         useGetProductsQuery,
+         useGetCustomersQuery,
+         useGetTransactionsQuery,
+         useGetGeographyQuery,
+         useGetSalesQuery,
+         useGetAdminsQuery,
+         useGetUserPerformanceQuery,
+         useGetDashboardQuery,
+   4) Create local host port as 3000 by create {.env.local}
+      1) Then configuration is as : REACT_APP_BASE_URL=http://localhost:5001
+      ***The reason to be create this file because when deploy application this port must set to different**
 <!-- Create Layout : Scenes -->
