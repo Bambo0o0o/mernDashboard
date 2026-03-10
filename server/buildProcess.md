@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 1:41:27
+Last building time : 2:03:07 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -24,6 +24,8 @@ git push -u origin main
    2) For block comments : Shift + Alt + A
    3) Run server : npm run dev
    4) Run client : npm start
+   5) Console.log : highlight word + {ctrl + k} then {ctrl + l}
+   6) Development tool : ctrl+shift+l
 
  <!-- Tools for project -->
     Node: <https://nodejs.org/en/download/>
@@ -191,7 +193,8 @@ git push -u origin main
 11) Making comments element on Sidebar code : <https://mui.com/material-ui/react-drawer/>
 12) Then complete Adding code from EdRoh
 
-<!-- RTK Query and injecting mock data into MongoDB -->
+## RTK Query and injecting mock data into MongoDB
+
 <!-- Create User field to support User data -->
 1) Create User information to User profile on {index.js} in state folder
     1) Sending UserId to backend and backend
@@ -219,21 +222,48 @@ git push -u origin main
    ***Get error : E11000 duplicate key error collection:***
       Solver err : Cancel duplicate userID
     4) We can check existing userID on client side from index.js in state folder on find tab of MongoDb with syntax as: {_id: ObjectId('63701cc1f03239b7f700000e')} --> then press find or enter
+
 6) Setup API Free call to the backend using redux-toolkit
    1) Create {api.js} in state folder
    2) Import createApi, fetchBaseQuery from redux-toolkit
-   3) Create functions as :
+   3) Create getUser functions as :
          createApi,
          useGetUserQuery,
-         useGetProductsQuery,
+         <!-- useGetProductsQuery,
          useGetCustomersQuery,
          useGetTransactionsQuery,
          useGetGeographyQuery,
          useGetSalesQuery,
          useGetAdminsQuery,
          useGetUserPerformanceQuery,
-         useGetDashboardQuery,
+         useGetDashboardQuery, -->
    4) Create local host port as 3000 by create {.env.local}
       1) Then configuration is as : REACT_APP_BASE_URL=http://localhost:5001
-      ***The reason to be create this file because when deploy application this port must set to different**
+      ***The reason to be create this file because when deploy application this port must set to different meant that when setting server url to rendering this url will be different as this example : <https://simplepiechart.onrender.com>**
+   5) Setup {api.js} which set tagTypes as User
+   6) Setup "getUser" call back function as (build)=>({getUser:build.query({query:(id)=>...})...})     T(1:47:37)
+   7) Last setting is recall to :
+      1) router.get("/user/:id", getUser) function in {general.js} in controllers folder
+      2) which link to  export const getUser = async (req, res) => {} on {general.js} on routes folder
+   8) Go to {index.js} in client folder to import {setupListeners} from redux-toolkit and api from state folder
+      1) Setup reducer taq with : [api.reducerPath]: api.reducer,
+      2) Then setup middleware with getDefault with ..api.middleware
+      3) Setup listener as : setupListeners(store.dispatch)
+   9) Go to {index.jsx} in layout folder set import useGetUserQuery from api
+      1) Create param as userId and data to handling each userId data
+      2) Testing logging data from userId with in {index.jsx} : console.log("data:", data)
+
+   ***Checking with data flow on development tools with Fetxh/XHR will see userID was fetched for example last user is : "63701cc1f03239b7f700000e" is "Shelly" ---> online url : <http://localhost:5001/general/user/63701cc1f03239b7f700000e>***
+      3) Now it still fixed as Shelly user which cann't change now
+   10) Adding user taq to {index.jsx} in components folder : user={data || {}}
+7) Adding user profile to {Sidebar.jsx}
+   1) Create user profile on sidebar in {Sidebar.jsx}
+   2) Setup profile on bottom of Sidebar
+   3) Decorative user profile with text and profile picture
+8) Adding user profile to {Navebar.jsx}
+   1) Create user profile on navbar in {navbar.jsx} under 3rd IconButton taq
+   2) Setup drop down button for logout function
+   3) 
+   ***Here complete setup reduxToolkit for userAPI**
+
 <!-- Create Layout : Scenes -->

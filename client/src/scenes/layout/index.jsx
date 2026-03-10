@@ -12,11 +12,13 @@ const Layout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
   const { data } = useGetUserQuery(userId);
+  // console.log("data:", data);                              // Too testing data 1:53:27
 
   return (
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
       {/* Adding Closed-Expanded function */}
       <Sidebar
+        // Adding User profile to Sidebar
         user={data || {}}
         isNonMobile={isNonMobile}
         drawerWidth="250px"
@@ -26,6 +28,7 @@ const Layout = () => {
       <Box flexGrow={1}>
         {/* Top page with : Search-Setting-Profile */}
         <Navbar
+          // Adding User profile to Navbar
           user={data || {}}
           // Adding Burger button to Closed and Expanded Sidebar
           isSidebarOpen={isSidebarOpen}

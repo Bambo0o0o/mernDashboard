@@ -28,6 +28,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
 
+  // Setup params for User-Profile dropdown logout
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
   const handleClick = (event) => setAnchorEl(event.currentTarget);
@@ -73,6 +74,8 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
           <IconButton>
             <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
+                    
+          {/* Adding User-profile Picture and Name*/}
           <FlexBetween>
             <Button
               onClick={handleClick}
@@ -84,6 +87,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                 gap: "1rem",
               }}
             >
+              {/* Copy code below from Sidebar to here just change sizing */}
               <Box
                 component="img"
                 alt="profile"
@@ -111,6 +115,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
               <ArrowDropDownOutlined
                 sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
               />
+              {/* Adding User-Profile logout menu */}
             </Button>
             <Menu
               anchorEl={anchorEl}
@@ -121,6 +126,8 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
               <MenuItem onClick={handleClose}>Log Out</MenuItem>
             </Menu>
           </FlexBetween>
+          {/* Complete setup User-Profile */}
+
         </FlexBetween>
       </Toolbar>
     </AppBar>

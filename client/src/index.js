@@ -11,11 +11,11 @@ import { api } from "state/api"
 const store = configureStore({
   reducer: {
     global: globalReducer,
-    [api.reducerPath]: api.reducer,
+    [api.reducerPath]: api.reducer,                                 //Setup for getUser api
   },
-  middleware: (getDefault) => getDefault().concat(api.middleware),
+  middleware: (getDefault) => getDefault().concat(api.middleware),  //Setup for getUser api
 });
-setupListeners(store.dispatch);
+setupListeners(store.dispatch);                                     //Setup for getUser api
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
