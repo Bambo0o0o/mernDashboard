@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 2:03:07 / 7:00:32
+Last building time : 2:28:00 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -193,7 +193,7 @@ git push -u origin main
 11) Making comments element on Sidebar code : <https://mui.com/material-ui/react-drawer/>
 12) Then complete Adding code from EdRoh
 
-## RTK Query and injecting mock data into MongoDB
+## RTK Query and injecting mock data into MongoDB : Create Navbar and Sidebar layout
 
 <!-- Create User field to support User data -->
 1) Create User information to User profile on {index.js} in state folder
@@ -263,7 +263,52 @@ git push -u origin main
 8) Adding user profile to {Navebar.jsx}
    1) Create user profile on navbar in {navbar.jsx} under 3rd IconButton taq
    2) Setup drop down button for logout function
-   3) 
-   ***Here complete setup reduxToolkit for userAPI**
+   3) Decorative user profile with logout button
+   ***Here complete setup User-Profile -layout**
 
+## ERD Diagram and Data Modeling : Create Products page 2:10:04
+
+1) Explain about SQL format and NoSQL format using Lucidchart or Draw.io webpage
+
+## Products Page 2:20:00
+
+1) On server side create {Product.js} in models folder
+2) Inside {Product.js} file
+   1) Import mongoose
+   2) Create Product schema with ProductSchema name
+   3) Create ProductSchema components as
+         name: String,
+         price: Number,
+         description: String,
+         category: String,
+         rating: Number,
+         supply: Number,
+         timestamps: true,
+3) Create {ProductStat.js} in models folder
+   1) Import mongoose
+   2) Create ProductStat schema with ProductStatSchema name
+   3) Create ProductStatSchema components as
+         productId: String,
+         yearlySalesTotal: Number,
+         yearlyTotalSoldUnits: Number,
+         year: Number,
+         monthlyData : [],
+         dailyData : [],
+         timestamps: true
+4) Go to {index.js} in server folder
+   1) Import Product and ProductStat to mongoDB
+   2) Adding dataProduct and dataProductStat
+   3) Export dataProduct and dataProductStat to MongoDB
+   4) Check data was upload to mongoDB which dataProduct and dataProductStat will include data 30 set
+5) Setup {client.js} in routes folder
+   1) Import express
+   2) Import getProduct
+   3) Create param : const router = express.Router()
+   4) Create get route with : router.get("/products", getProducts);
+6) Setup {clinent.js} in controllers folder
+   1) Import Product and ProductStat
+   2) Create async function as : const getProducts = async (req, res) =>{try{}catch(error){}}
+
+
+## Customers Page 3:02:41 
 <!-- Create Layout : Scenes -->

@@ -15,15 +15,19 @@ import salesRoutes from "./routes/sales.js";
 
 /* Import User data to MongoDB */
 import User from "./models/User.js";
-// import Product from "./models/Product.js";
-// import ProductStat from "./models/ProductStat.js";
+/* Import Product and ProductStat data tp MongoDB */
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
 // import Transaction from "./models/Transaction.js";
 // import OverallStat from "./models/OverallStat.js";
 // import AffiliateStat from "./models/AffiliateStat.js";
 import {
+  // Adding dataUser
   dataUser,
+  // Adding dataProduct and dataProductStat
   dataProduct,
   dataProductStat,
+  
   dataTransaction,
   dataOverallStat,
   dataAffiliateStat,
@@ -54,10 +58,11 @@ mongoose.connect(process.env.MONGO_URI)
 
     /* ONLY ADD DATA ONE TIME ---> Close it after used onetime by "ctrl + /"*/
     // User.insertMany(dataUser);
-    // AffiliateStat.insertMany(dataAffiliateStat);
-    // OverallStat.insertMany(dataOverallStat);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+
+    // AffiliateStat.insertMany(dataAffiliateStat);
+    // OverallStat.insertMany(dataOverallStat);
     // Transaction.insertMany(dataTransaction);
     
 
