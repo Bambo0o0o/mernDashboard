@@ -269,6 +269,7 @@ git push -u origin main
 ## ERD Diagram and Data Modeling : Create Products page 2:10:04
 
 1) Explain about SQL format and NoSQL format using Lucidchart or Draw.io webpage
+   <https://lucid.app/lucidchart/81ff5432-cc50-4c41-a7b8-7258fec1e630/view?page=0_0#>
 
 ## Products Page 2:20:00
 
@@ -307,8 +308,28 @@ git push -u origin main
    4) Create get route with : router.get("/products", getProducts);
 6) Setup {clinent.js} in controllers folder
    1) Import Product and ProductStat
-   2) Create async function as : const getProducts = async (req, res) =>{try{}catch(error){}}
+   2) Create async function for getProduct as : const getProducts = async (req, res) =>{try{}catch(error){}}
+   3) Adding Product information and ProductStat to product page as :
+      1) const products = await Product.find()
+      2) const productsWithStats = await Promise.all()
+   4) Mapping to productId: product._id
+   5) Return product information
+   6) Return status of page as 200 code : res.status(200).json(productsWithStats)
+***Try to understanding by Database diagram as <https://lucid.app/lucidchart/81ff5432-cc50-4c41-a7b8-7258fec1e630/view?page=0_0#>**
 
+7) Back to frontend(client) to render Product page
+   1) Go to {api.js} in state folder then setup Product to point to redux/toolkit on database
+   2) In {api.js} adding Products to tagTypes
+   3) Setup getProduct to query a product : getProducts: build.query({...})
+   4) Then export useGetProductsQuery as api
+   5) Go to {App.js} in src folder to setup product for render page
+      1) Import Product from scenes/products
+      2) Setup route path to : Route path to product
+      3) Create products folder in scenes
+      4) Create {index.jsx} in products folder
+      5) Setup Product and Products page in {index.jsx} file using "rafce" shortkey
+      6) Adding {Header.jsx} in components folder
+      7) Setup {Header.jsx} file
 
 ## Customers Page 3:02:41 
 <!-- Create Layout : Scenes -->

@@ -18,10 +18,11 @@ export const getProducts = async (req, res) => {
         };
       })
     );
-
+    // Make catch up error when connect to database
     res.status(200).json(productsWithStats);
   } catch (error) {
-    res.status(404).json({ message: error.message });
+    //This catch up error just get information for the real app must more indept
+    res.status(404).json({ message: error.message });       
   }
 };
 

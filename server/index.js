@@ -51,15 +51,15 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* Mongoose Setup */
-const PORT = process.env.PORT || 9000;          //process.env. allow us to acces .env file
+const PORT = process.env.PORT || 9000;                  //process.env. allow us to acces .env file
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
     /* ONLY ADD DATA ONE TIME ---> Close it after used onetime by "ctrl + /"*/
-    // User.insertMany(dataUser);
-    // Product.insertMany(dataProduct);
-    // ProductStat.insertMany(dataProductStat);
+    // User.insertMany(dataUser);                       //Add 01
+    // Product.insertMany(dataProduct);                 //Add 02
+    // ProductStat.insertMany(dataProductStat);         //Add 03
 
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
