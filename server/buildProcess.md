@@ -338,7 +338,15 @@ git push -u origin main
        1) Create Title and Subtile
        2) Decorative with Box and Typography
        3) All of Header setup for decoration on Header of each page name(Title and subTitle)
-   11) 
 
-## Customers Page 3:02:41 
-<!-- Create Layout : Scenes -->
+## Customers Page 3:02:41
+<!-- Grap data of User from backend and Show on data list from @mui/materials -->
+1) Go to {client.js} file in routes folder import getCustomer and Create Customer route
+2) Go to {client.js} file in controllers folder Setup getCustomer function to handling customers login
+3) Go to {App.js} file in client folder
+   1) Import customer from "scenes/customers"
+   2) Create route path for customers
+4) Create customers folder in client/src/scenes
+5) Create customers on {api.js} file in state folder and Export useGetCustomersQuery
+6) Create {index.jsx} file in customers folder
+   1) 
