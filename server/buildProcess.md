@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 2:28:00 / 7:00:32
+Last building time : 2:37:49 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -325,11 +325,19 @@ git push -u origin main
    5) Go to {App.js} in src folder to setup product for render page
       1) Import Product from scenes/products
       2) Setup route path to : Route path to product
-      3) Create products folder in scenes
-      4) Create {index.jsx} in products folder
-      5) Setup Product and Products page in {index.jsx} file using "rafce" shortkey
-      6) Adding {Header.jsx} in components folder
-      7) Setup {Header.jsx} file
+   6) Create products folder in scenes
+   7) Create {index.jsx} in products folder
+   8) Setup Product and Products page in {index.jsx} file using "rafce" shortkey
+      1) Import tools from @mui/materials, Header, useGetProductsQuery
+      2) Create Product schema with :_id,name,description,price,rating,category,supply,stat,
+      3) Create Products to Mapping product
+      4) Import Header for Products page from components folder
+   9) Adding {Header.jsx} in components folder
+   10) Setup {Header.jsx} file by import @mui/material
+       1) Create Title and Subtile
+       2) Decorative with Box and Typography
+       3) All of Header setup for decoration on Header of each page name(Title and subTitle)
+   11) 
 
 ## Customers Page 3:02:41 
 <!-- Create Layout : Scenes -->
