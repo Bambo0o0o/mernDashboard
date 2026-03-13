@@ -330,7 +330,7 @@ git push -u origin main
    8) Setup Product and Products page in {index.jsx} file using "rafce" shortkey
       1) Import tools from @mui/materials, Header, useGetProductsQuery
       2) Create Product schema with :_id,name,description,price,rating,category,supply,stat,
-      3) Create Products to Mapping product
+      3) Create Products to Mapping each product
       4) Import Header for Products page from components folder
    9) Adding {Header.jsx} in components folder
    10) Setup {Header.jsx} file by import @mui/material

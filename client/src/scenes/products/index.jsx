@@ -14,6 +14,7 @@ import {
 import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
 
+// Setup product field information
 const Product = ({
   _id,
   name,
@@ -28,6 +29,7 @@ const Product = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
+    // Decorative product card
     <Card
       sx={{
         backgroundImage: "none",
@@ -88,12 +90,13 @@ const Product = ({
 const Products = () => {
   const { data, isLoading } = useGetProductsQuery();
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
-
+  // Decoration Product grid
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="PRODUCTS" subtitle="See your list of products." />
       {data || !isLoading ? (
         <Box
+        // Create Grid for Products page
           mt="20px"
           display="grid"
           gridTemplateColumns="repeat(4, minmax(0, 1fr))"
@@ -104,6 +107,7 @@ const Products = () => {
             "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
           }}
         >
+          {/* Mapping each product */}
           {data.map(
             ({
               _id,
