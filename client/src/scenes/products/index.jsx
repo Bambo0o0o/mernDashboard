@@ -29,7 +29,7 @@ const Product = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    // Decorative product card
+    // Decorative product with card from @mui/material
     <Card
       sx={{
         backgroundImage: "none",
