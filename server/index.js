@@ -60,10 +60,11 @@ mongoose.connect(process.env.MONGO_URI)
     // User.insertMany(dataUser);                       //Add 01
     // Product.insertMany(dataProduct);                 //Add 02
     // ProductStat.insertMany(dataProductStat);         //Add 03
+    // Transaction.insertMany(dataTransaction);         //Add 04
 
     // AffiliateStat.insertMany(dataAffiliateStat);
     // OverallStat.insertMany(dataOverallStat);
-    // Transaction.insertMany(dataTransaction);
+    
     
 
   })

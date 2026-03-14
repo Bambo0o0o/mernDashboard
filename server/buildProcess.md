@@ -362,6 +362,27 @@ git push -u origin main
 
 ## Transactions Page 3:23:26
 
+1) Go to {client.js} file in routes folder import getTransaction and Create Customer route
+2) Go to {client.js} file in controllers folder
+   1) Import Transaction from models {Transaction.js}
+   2) Setup getTransaction function to handling Transactions login
+3) Create Transactions on {api.js} file in state folder 
+   1) Adding Transactions to tagTypes
+   2) Create getTransaction function
+   3) Export useGetTransactionsQuery
+4) Go to {App.js} file in client folder(Frontend) to setup rendering Transactions
+   1) Import Transaction from "scenes/Transactions"
+   2) Create route path for Transactions
+5) Create {DataGridCustomToolbar.jsx} in components folder
+   1) 
+6) Create Transactions folder in client/src/scenes
+   1) Create {index.jsx} file in Transactions folder
+   2) Import react, @mui/material, Header, @mui/x-data-grid
+   ***Tool to show as list page : <https://mui.com/x/react-data-grid/>***
+   3) Create function with shortkey "rafce" and set name as Transactions
+   4) Setup Transaction fields as : _id, name, email, phoneNumber, country, occupation and role
+   5) Decorative Transaction page with DataGrid as List format
+
 ## Geography Page 4:05:00
 
 ## Overview Page 4:27:18

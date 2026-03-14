@@ -4,7 +4,8 @@ import {
   getProducts,
   // Setup import Customers
   getCustomers,
-  // getTransactions,
+  // Setup import Transactions
+  getTransactions,
   // getGeography,
 } from "../controllers/client.js";
 
@@ -14,8 +15,9 @@ const router = express.Router();
 router.get("/products", getProducts);
 // Setup router to getCustomers
 router.get("/customers", getCustomers);
+// Setup router to getTransactions
+router.get("/transactions", getTransactions);
 
-// router.get("/transactions", getTransactions);
 // router.get("/geography", getGeography);
 
 export default router;
