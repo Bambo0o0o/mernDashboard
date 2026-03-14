@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 2:37:49 / 7:00:32
+Last building time : 3:08:27 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -339,14 +339,46 @@ git push -u origin main
        2) Decorative with Box and Typography
        3) All of Header setup for decoration on Header of each page name(Title and subTitle)
 
-## Customers Page 3:02:41
+## Customers Page 3:02:41 --> Try to undestand route setup each file that involved this Customer setup
 <!-- Grap data of User from backend and Show on data list from @mui/materials -->
 1) Go to {client.js} file in routes folder import getCustomer and Create Customer route
-2) Go to {client.js} file in controllers folder Setup getCustomer function to handling customers login
-3) Go to {App.js} file in client folder
+2) Go to {client.js} file in controllers folder
+   1) Import User from models {User.js}
+   2) Setup getCustomer function to handling customers login
+3) Create customers on {api.js} file in state folder 
+   1) Adding customers to tagTypes
+   2) Create getCustomer function
+   3) Export useGetCustomersQuery
+4) Go to {App.js} file in client folder(Frontend) to setup rendering Customers
    1) Import customer from "scenes/customers"
    2) Create route path for customers
-4) Create customers folder in client/src/scenes
-5) Create customers on {api.js} file in state folder and Export useGetCustomersQuery
-6) Create {index.jsx} file in customers folder
-   1) 
+5) Create customers folder in client/src/scenes
+   1) Create {index.jsx} file in customers folder
+   2) Import react, @mui/material, Header, @mui/x-data-grid
+   ***Tool to show as list page : <https://mui.com/x/react-data-grid/>***
+   3) Create function with shortkey "rafce" and set name as Customers
+   4) Setup customer fields as : _id, name, email, phoneNumber, country, occupation and role
+   5) Decorative Customer page with DataGrid as List format
+
+## Transactions Page 3:23:26
+
+## Geography Page 4:05:00
+
+## Overview Page 4:27:18
+
+## Daily Page 5:02:00
+
+## Monthly Page 5:17:20
+
+## Breakdown Page 5:22:39
+
+## Admin Page 5:37:15
+
+## Performance Page 5:48:03
+
+## Dashboard Page 6:09:21
+
+## Deployment on Render.com 6:44:05
+
+## Completed and Deployed MERN Stack Admin Dashboard 6:57:57
+

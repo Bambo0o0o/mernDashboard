@@ -9,6 +9,7 @@ const Customers = () => {
   const { data, isLoading } = useGetCustomersQuery();
   console.log("data", data);
 
+  // Setup each Customer fields to Suppot Customer's information
   const columns = [
     {
       field: "_id",
@@ -52,7 +53,9 @@ const Customers = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
+      {/* Create Customer name of title and subtitle and Decorative*/}
       <Header title="CUSTOMERS" subtitle="List of Customers" />
+      {/* Create Height and Decorative Data Grid using : @mui/x-data-grid*/}
       <Box
         mt="40px"
         height="75vh"
@@ -81,6 +84,7 @@ const Customers = () => {
           },
         }}
       >
+        {/* Setup Loading Data from MongoDB by ID : Data grid include standard "Ascend-Descend" filter*/}
         <DataGrid
           loading={isLoading || !data}
           getRowId={(row) => row._id}
