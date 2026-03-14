@@ -15,21 +15,31 @@ import salesRoutes from "./routes/sales.js";
 
 /* Import User data to MongoDB */
 import User from "./models/User.js";
-/* Import Product and ProductStat data tp MongoDB */
+
+/* Import Product and ProductStat data to MongoDB */
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
-// import Transaction from "./models/Transaction.js";
-// import OverallStat from "./models/OverallStat.js";
+
+/* Import Transaction data to MongoDB */
+import Transaction from "./models/Transaction.js";
+
+/* Import OverallStat(Sales) data to MongoDB */
+import OverallStat from "./models/OverallStat.js";
+
+/* Import AffiliateStat data to MongoDB */
 // import AffiliateStat from "./models/AffiliateStat.js";
+
 import {
   // Adding dataUser
   dataUser,
-  // Adding dataProduct and dataProductStat
+  // Adding dataProduct and dataProductStat to MongoDB from data/index.js file
   dataProduct,
   dataProductStat,
-  
+  // Adding dataTransaction to MongoDB from data/index.js file
   dataTransaction,
+  // Adding dataOverallStat to MongoDB from data/index.js file
   dataOverallStat,
+  // Adding dataAffiliateStat to MongoDB from data/index.js file
   dataAffiliateStat,
 } from "./data/index.js";
 
@@ -61,9 +71,9 @@ mongoose.connect(process.env.MONGO_URI)
     // Product.insertMany(dataProduct);                 //Add 02
     // ProductStat.insertMany(dataProductStat);         //Add 03
     // Transaction.insertMany(dataTransaction);         //Add 04
-
+    // OverallStat.insertMany(dataOverallStat);         //Add 05
     // AffiliateStat.insertMany(dataAffiliateStat);
-    // OverallStat.insertMany(dataOverallStat);
+    
     
     
 

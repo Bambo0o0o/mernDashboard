@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 3:08:27 / 7:00:32
+Last building time : 4:31:01 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -229,10 +229,10 @@ git push -u origin main
    3) Create getUser functions as :
          createApi,
          useGetUserQuery,
-         <!-- useGetProductsQuery,
+         useGetProductsQuery,
          useGetCustomersQuery,
          useGetTransactionsQuery,
-         useGetGeographyQuery,
+         <!-- useGetGeographyQuery,
          useGetSalesQuery,
          useGetAdminsQuery,
          useGetUserPerformanceQuery,
@@ -267,7 +267,17 @@ git push -u origin main
    ***Here complete setup User-Profile -layout**
 
 ## ERD Diagram and Data Modeling : Create Products page 2:10:04
+<!-- Remind that all data that upload to MongoDB come from {index.js} in server/data folder
+   From taq : import {
+                        dataUser,
+                        dataProduct,
+                        dataProductStat,
+                        dataTransaction,
+                        dataOverallStat,
+                        dataAffiliateStat,
+                     } from "./data/index.js" -->
 
+<!-- Start Client setup Section -->
 1) Explain about SQL format and NoSQL format using Lucidchart or Draw.io webpage
    <https://lucid.app/lucidchart/81ff5432-cc50-4c41-a7b8-7258fec1e630/view?page=0_0#>
 
@@ -373,6 +383,7 @@ git push -u origin main
 4) Go to {App.js} file in client folder(Frontend) to setup rendering Transactions
    1) Import Transaction from "scenes/Transactions"
    2) Create route path for Transactions
+***Skip to see how to setup Graph***
 5) Create {DataGridCustomToolbar.jsx} in components folder
    1) 
 6) Create Transactions folder in client/src/scenes
@@ -385,13 +396,58 @@ git push -u origin main
 
 ## Geography Page 4:05:00
 
+<!-- End Client setup Section -->
+
+<!-- Start Sales setup Section -->
 ## Overview Page 4:27:18
+
+1) Go to models folder in server folder
+   1) Create {OverallStat.js} file
+   2) In {OverallStat.js} file create OverallStatSchema
+   3) Create schema field as :
+      - totalCustomers: Number,
+      - yearlySalesTotal: Number,
+      - yearlyTotalSoldUnits: Number,
+      - year: Number,
+      - monthlyData: [{}],
+      - dailyData: [{}],
+      - salesByCategory: {},
+      - { timestamps: true }
+2) Go to {index.jx} file in server folder
+   1) Import OverallStat from "./models/OverallStat.js"
+   2) Upload data (one-time) dataOverallStat from data/index.js
+   3) Uncomment taq : OverallStat.insertMany(dataOverallStat)
+   4) Save file and comment to protect re-upload : 4:30:46
+3) Go to {sales.js} file in routes folder import getSales and Create sales route
+4) Go to {sales.js} file in controllers folder
+   1) Import OverallStat from models folder in {OverallStat.js} file
+   2) Setup getSales function to handling OverallStats login
+5) Create Sales on {api.js} file in state folder
+   1) Adding Sales to tagTypes
+   2) Create getSales function
+   3) Export useGetSalesQuery
+6) Go to {App.js} file in sales folder(Frontend) to setup rendering Overview
+   1) Import OverallStat from "scenes/Overview"
+   2) Create route path for Overview
+7) Create Overview folder in sales/src/scenes
+   1) Create {index.jsx} file in Overview folder
+   2) Create {OverviewChart.jsx} in components folder
+   ***Get error not install @nivo/line solve by : npm install @nivo/line @nivo/core --legacy-peer-deps***
+      1) Create ....
+   3) Import react, @mui/material, Header, @mui/x-data-grid
+   ***Tool to show as list page : <https://mui.com/x/react-data-grid/>***
+   4) Create function with shortkey "rafce" and set name as Overview
+   5) Setup OverallStat fields as : _id, name, email, phoneNumber, country, occupation and role
+   6) Decorative OverallStat page with DataGrid as List format
 
 ## Daily Page 5:02:00
 
 ## Monthly Page 5:17:20
 
 ## Breakdown Page 5:22:39
+
+<!-- End Sales setup Section -->
+
 
 ## Admin Page 5:37:15
 
