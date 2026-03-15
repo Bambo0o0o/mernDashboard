@@ -613,9 +613,28 @@ git push -u origin main
    2) Create callBack function for getDashboardStats
 
    <!-- Frontend Setup  -->
-
+3) Go to {api.js} in state folder
+   1) Adding Dashboard to tagTypes
+   2) Create getDashboard function to handling Dashboard
+   3) Export useGetDashboardQuery to render dashboard
+4) Go to {index.jsx} in scenes/dashboard folder
+   1) Import react, components/FlexBetween, components/Header, @mui/icons-material, @mui/material, @mui/x-data-grid, components/BreakdownChart, components/OverviewChart, state/api, components/StatBox
+   <!-- Adding Data : Total customers, Sales Today, Monthly Sales, Yearly Sales data 6:25:37-->
+5) Create {StatBox.jsx} in components folder 
+   1) Import react, @mui/material, ./FlexBetween
+   2) Create StatBox function to handling : Total customers, Sales Today, Monthly Sales, Yearly Sales data
+   ***Come back to see process to pick up each dashbord elements and show them to gether to understand manipulate data flow**
+   <!-- Adding Data : Transaction 6:40:45 -->
+6) Go to {index.jsx} in transactions folder
+   1) Copy DataGrid components and place to {index.jsx} in dashboard
+   2) Select only loading, getRowId, rows, columns
+   <!-- Adding Data : Pie Chart 6:40:50 -->
+7) Setup Pie Chart to render in dashboard
+   1) Import Pie chart : BreakdownChart isDashboard={true}
 
 ## Deployment on Render.com 6:44:05
+
+1) Go to Webside : <render.com>
 
 ## Completed and Deployed MERN Stack Admin Dashboard 6:57:57
 
