@@ -474,14 +474,14 @@ git push -u origin main
 
 ## Daily Page 5:02:00
 
-   <!-- Backend Setup -->
+   <!-- Frontend Setup -->
 1) Go to scenes folder create daily folder
    1) Create {index.jsx} in daily folder
    2) Import react, @mui/material, Header, @nivo/line, state/api, react-datepicker
    3) Create Daily callBack function
    4) Decorative Daily page
    ***Daily page don't need to create on controllers folder and api.js in state folder because this page don't show on main Dashboard**
-2) Go to {App.js} file in src folder(Frontend) to setup rendering Overview
+2) Go to {App.js} file in src folder(Frontend) to setup rendering Daily page
    1) Import Daily from "scenes/daily"
    2) Create route path for /daily
 ***(imported as 'findDOMNode') was not found in 'react-dom'***
@@ -489,6 +489,23 @@ git push -u origin main
 ***solve by used : npm install react-datepicker@latest***
 
 ## Monthly Page 5:17:20
+
+<!-- Frontend Setup -->
+1) Go to scenes folder create monthly folder
+   1) Create {index.jsx} in monthly folder
+   2) Import react, @mui/material, Header, @nivo/line, state/api
+   3) Create Monthly callBack function
+   4) Decorative Monthly page
+   ***Monthly page don't need to create on controllers folder and api.js in state folder because this page don't show on main Dashboard**
+2) Go to {App.js} file in src folder(Frontend) to setup rendering Monthly page
+   1) Import Monthly from "scenes/monthly"
+   2) Create route path for /monthly
+
+**********************Good thing for redux toolkit************************************************
+***It shared data which no need to seperate data on each page such Overview, Daily, Monthly and***
+***Breakdown pages which it will save our money from database data size------------------------***
+**************************************************************************************************
+
 
 ## Breakdown Page 5:22:39
 
