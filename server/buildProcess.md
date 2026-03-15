@@ -484,6 +484,9 @@ git push -u origin main
 2) Go to {App.js} file in src folder(Frontend) to setup rendering Overview
    1) Import Daily from "scenes/daily"
    2) Create route path for /daily
+***(imported as 'findDOMNode') was not found in 'react-dom'***
+***cause is : depreciate version***
+***solve by used : npm install react-datepicker@latest***
 
 ## Monthly Page 5:17:20
 
