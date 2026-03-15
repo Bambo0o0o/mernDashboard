@@ -27,7 +27,7 @@ import Transaction from "./models/Transaction.js";
 import OverallStat from "./models/OverallStat.js";
 
 /* Import AffiliateStat data to MongoDB */
-// import AffiliateStat from "./models/AffiliateStat.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 
 import {
   // Adding dataUser
@@ -72,10 +72,8 @@ mongoose.connect(process.env.MONGO_URI)
     // ProductStat.insertMany(dataProductStat);         //Add 03
     // Transaction.insertMany(dataTransaction);         //Add 04
     // OverallStat.insertMany(dataOverallStat);         //Add 05
-    // AffiliateStat.insertMany(dataAffiliateStat);
+    // AffiliateStat.insertMany(dataAffiliateStat);     //Add 06(lastest)
     
     
-    
-
   })
   .catch((error) => console.log(`${error} did not connect`));

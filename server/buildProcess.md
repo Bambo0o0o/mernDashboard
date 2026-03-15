@@ -488,6 +488,12 @@ git push -u origin main
 ***cause is : depreciate version***
 ***solve by used : npm install react-datepicker@latest***
 
+<!-- ***No need Backend Setup -->
+**********************Good thing for redux toolkit************************************************
+***It shared data which no need to seperate data on each page such Overview, Daily, Monthly and***
+***Breakdown pages which it will save our money from database data size------------------------***
+**************************************************************************************************
+
 ## Monthly Page 5:17:20
 
 <!-- Frontend Setup -->
@@ -501,20 +507,100 @@ git push -u origin main
    1) Import Monthly from "scenes/monthly"
    2) Create route path for /monthly
 
+<!-- ***No need Backend Setup -->
 **********************Good thing for redux toolkit************************************************
 ***It shared data which no need to seperate data on each page such Overview, Daily, Monthly and***
 ***Breakdown pages which it will save our money from database data size------------------------***
 **************************************************************************************************
 
-
 ## Breakdown Page 5:22:39
 
+<!-- Frontend Setup -->
+1) Go to {App.js} file in src folder(Frontend) to setup rendering Breakdown page
+   1) Import Breakdown from "scenes/breakdown"
+   2) Create route path for /breakdown
+2) Go to scenes folder create breakdown folder
+   1) Create {index.jsx} in breakdown folder
+   2) Import react, @mui/material, Header, @nivo/line, state/api
+   3) Create breakdown callBack function
+   4) Decorative breakdown page
+3) Go to components folder create {BreakdownChart.jsx} file
+   1) Import react, @nivo/pie, @mui/material, state/api
+   2) Create BreakdownChart callBack function
+   3) Decorative BreakdownChart
+
+<!-- ***No need Backend Setup -->
+**********************Good thing for redux toolkit************************************************
+***It shared data which no need to seperate data on each page such Overview, Daily, Monthly and***
+***Breakdown pages which it will save our money from database data size------------------------***
+**************************************************************************************************
 <!-- End Sales setup Section -->
 
-
+<!-- Start Management setup Section -->
 ## Admin Page 5:37:15
 
+   <!-- Backend setup -->
+1) Go to {management.js} in routes folder
+   1) Import express, getAdmin
+   2) Create router for : getAdmins
+2) Go to {management.js} in controllers folder
+   1) Import mongoose, User.js, Transaction.js
+   2) Create callBack fucntion for getAdmins to tracking Events and errorHandling
+   <!-- Frontend Setup  -->
+3) Go to {api.js} in state folder
+   1) Adding Admin to taqTypes;[]
+   2) Create Admin callBack function
+   3) Export useGetAdminsQuery
+4) Go to {App.js} in src folder
+   1) Import Admin
+   2) Create route path for Admin
+5) Go to scenes folder
+   1) Create admin folders
+   2) Create {index.jsx} in there
+   3) On {index.jsx} in admin folder
+      1) Import react, @mui/material, @mui/x-data-grid, state/api, components/Header, components/DataGridCustomColumnMenu
+      2) xx
+   4) Create {DataGridCustomColumnMenu.jsx} in components folder
+      1) Import @mui/x-data-grid tools set
+      2) Create callBack function to handling CustomColumnMenu
+   ***Get error : ERROR in ./src/components/DataGridCustomColumnMenu.jsx 16:36-54 export 'GridFilterMenuItem' (imported as 'GridFilterMenuItem') was not found***
+   ***Solve by install packages : npm install react@18.2.0 react-dom@18.2.0 @mui/material@5 @mui/icons-material@5 @mui/x-data-grid@5.17.26 react-datepicker@4.16.0***
+
 ## Performance Page 5:48:03
+
+ <!-- Backend setup -->
+1) Create {AffiliateStat.js} in models folder
+   1) Create AffiliateStatSchema using mongoose.Schema
+   2) Go to {index.js} in server folder
+      1) Import AffiliateStat
+      2) Uncomment : AffiliateStat.insertMany(dataAffiliateStat) to update data to MongoDB
+      3) Save file to upload
+      4) Comment again to protect re-upload data
+2) Go to {management.js} in routes folder
+   1) Import express, getUserPerformance
+   2) Create router for : getUserPerformance
+3) Go to {management.js} in controllers folder
+   1) Import mongoose, User.js, Transaction.js
+   2) Create callBack fucntion for getUserPerformance to tracking Events and errorHandling
+   <!-- Frontend Setup  -->
+4) Go to {api.js} in state folder
+   1) Adding Performance to taqTypes;[]
+   2) Create Performance callBack function
+   3) Export useGetUserPerformanceQuery
+5) Go to {App.js} in src folder
+   1) Import Performance
+   2) Create route path for Performance
+6) Go to scenes folder
+   1) Create performance folders
+   2) Create {index.jsx} in there
+   3) On {index.jsx} in performance folder
+      1) Import react, @mui/material, @mui/x-data-grid, state/api, components/Header, components/DataGridCustomColumnMenu
+      2) xx
+   4) Create {DataGridCustomColumnMenu.jsx} in components folder
+      1) Import @mui/x-data-grid tools set
+      2) Create callBack function to handling CustomColumnMenu
+
+<!-- End Management setup Section -->
 
 ## Dashboard Page 6:09:21
 
