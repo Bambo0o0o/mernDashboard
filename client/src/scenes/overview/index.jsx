@@ -13,6 +13,7 @@ const Overview = () => {
         subtitle="Overview of general revenue and profit"
       />
       <Box height="75vh">
+        {/* Create Drop down list :  Units and Sales */}
         <FormControl sx={{ mt: "1rem" }}>
           <InputLabel>View</InputLabel>
           <Select
@@ -24,6 +25,7 @@ const Overview = () => {
             <MenuItem value="units">Units</MenuItem>
           </Select>
         </FormControl>
+        {/* Import Line chart and Styled */}
         <OverviewChart view={view} />
       </Box>
     </Box>

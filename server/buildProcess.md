@@ -1,6 +1,6 @@
 # Build MERN React Admin dashboard
 
-Last building time : 4:31:01 / 7:00:32
+Last building time : 4:40:51 / 7:00:32
 
 link : <https://www.youtube.com/watch?v=0cPCMIuDk2I&t=1573s>
 gitHub : <https://github.com/Bambo0o0o/mernReactDashboard.git>
@@ -396,11 +396,32 @@ git push -u origin main
 
 ## Geography Page 4:05:00
 
+***Skip to see how to setup Graph***
+
+1) Go to {client.js} file in routes folder import getGeography and Create Customer route
+2) Go to {client.js} file in controllers folder
+   1) Import Geography from models {Geography.js}
+   2) Setup getGeography function to handling Geographys login
+3) Create Geographys on {api.js} file in state folder 
+   1) Adding Geographys to tagTypes
+   2) Create getGeography function
+   3) Export useGetGeographysQuery
+4) Go to {App.js} file in client folder(Frontend) to setup rendering Geographys
+   1) Import Geography from "scenes/Geographys"
+   2) Create route path for Geographys
+5) Create geography folder in client/src/scenes
+   1) Create {index.jsx} file in geography folder
+   2) Import react, @mui/material, Header, @mui/x-data-grid
+   ***Tool to show as list page : <https://mui.com/x/react-data-grid/>***
+   3) Create function with shortkey "rafce" and set name as Geographys
+   4) Setup Geography fields as : _id, name, email, phoneNumber, country, occupation and role
+   5) Decorative Geography page with DataGrid as List format
 <!-- End Client setup Section -->
 
 <!-- Start Sales setup Section -->
 ## Overview Page 4:27:18
 
+   <!-- Backend Setup -->
 1) Go to models folder in server folder
    1) Create {OverallStat.js} file
    2) In {OverallStat.js} file create OverallStatSchema
@@ -417,20 +438,79 @@ git push -u origin main
    1) Import OverallStat from "./models/OverallStat.js"
    2) Upload data (one-time) dataOverallStat from data/index.js
    3) Uncomment taq : OverallStat.insertMany(dataOverallStat)
-   4) Save file and comment to protect re-upload : 4:30:46
+   4) Save file and comment to protect re-upload : 4:31:09
 3) Go to {sales.js} file in routes folder import getSales and Create sales route
 4) Go to {sales.js} file in controllers folder
    1) Import OverallStat from models folder in {OverallStat.js} file
-   2) Setup getSales function to handling OverallStats login
+   2) Setup getSales function to handling OverallStats login and ErrorHandling
+   <!-- Frontend Setup -->
 5) Create Sales on {api.js} file in state folder
    1) Adding Sales to tagTypes
-   2) Create getSales function
+   2) Create getSales callBack function
    3) Export useGetSalesQuery
 6) Go to {App.js} file in sales folder(Frontend) to setup rendering Overview
-   1) Import OverallStat from "scenes/Overview"
-   2) Create route path for Overview
-7) Create Overview folder in sales/src/scenes
-   1) Create {index.jsx} file in Overview folder
+   1) Import Overview from "scenes/overview"
+   2) Create route path for /overview
+7) Create overview folder in sales/src/scenes
+   1) Create {index.jsx} file in overview folder
+      1) Creat "rafce" template function
+      2) Import react, @mui/material, Header, OverviewChart
+      3) Create title as "VIEW" and subtitle as "Overview of general revenue and profit"
+      4) Decorative overview page
+   2) Create {OverviewChart.jsx} in components folder
+   ***Get error not install @nivo/line solve by : npm install @nivo/line @nivo/core --legacy-peer-deps***
+      1) Create "rafce" template function
+      2) Create function name as OverviewChart
+      3) Import react, @mui/material, @nivo/line, state/api
+      4) Install nivo line chart : npm i @nivo/line ---> Normally case, If didn't error appeared
+      5) Setup line chart as : totalSalesLine and totalUnitsLine
+      6) Decorative overview page
+   3) Setup changing chart type on {index.jsx} in geography folder by copy theme section then place under data={view === "sales" ? totalSalesLine : totalUnitsLine} function
+   4) Import react, @mui/material, Header, @mui/x-data-grid
+   ***Tool to show as list page : <https://mui.com/x/react-data-grid/>***
+   5) Create function with shortkey "rafce" and set name as Overview
+   6) Setup OverallStat fields as : _id, name, email, phoneNumber, country, occupation and role
+   7) Decorative OverallStat page with DataGrid as List format
+
+## Daily Page 5:02:00
+
+   <!-- Backend Setup -->
+1) Go to models folder in server folder
+   1) Create {OverallStat.js} file
+   2) In {OverallStat.js} file create OverallStatSchema
+   3) Create schema field as :
+      - totalCustomers: Number,
+      - yearlySalesTotal: Number,
+      - yearlyTotalSoldUnits: Number,
+      - year: Number,
+      - monthlyData: [{}],
+      - dailyData: [{}],
+      - salesByCategory: {},
+      - { timestamps: true }
+2) Go to {index.jx} file in server folder
+   1) Import OverallStat from "./models/OverallStat.js"
+   2) Upload data (one-time) dataOverallStat from data/index.js
+   3) Uncomment taq : OverallStat.insertMany(dataOverallStat)
+   4) Save file and comment to protect re-upload : 4:31:09
+3) Go to {sales.js} file in routes folder import getSales and Create sales route
+4) Go to {sales.js} file in controllers folder
+   1) Import OverallStat from models folder in {OverallStat.js} file
+   2) Setup getSales function to handling OverallStats login and ErrorHandling
+   <!-- Frontend Setup -->
+5) Create Sales on {api.js} file in state folder
+   1) Adding Sales to tagTypes
+   2) Create getSales callBack function
+   3) Export useGetSalesQuery
+6) Go to {App.js} file in sales folder(Frontend) to setup rendering Overview
+   1) Import Overview from "scenes/overview"
+   2) Create route path for /overview
+7) Create overview folder in sales/src/scenes
+   1) Create {index.jsx} file in overview folder
+      1) Creat "rafce" template function
+      2) Import react, @mui/material, Header, OverviewChart
+      3) Create title as "VIEW" and subtitle as "Overview of general revenue and profit"
+      4) Setup line chart component as 
+      5) Decorative overview page
    2) Create {OverviewChart.jsx} in components folder
    ***Get error not install @nivo/line solve by : npm install @nivo/line @nivo/core --legacy-peer-deps***
       1) Create ....
@@ -439,8 +519,6 @@ git push -u origin main
    4) Create function with shortkey "rafce" and set name as Overview
    5) Setup OverallStat fields as : _id, name, email, phoneNumber, country, occupation and role
    6) Decorative OverallStat page with DataGrid as List format
-
-## Daily Page 5:02:00
 
 ## Monthly Page 5:17:20
 

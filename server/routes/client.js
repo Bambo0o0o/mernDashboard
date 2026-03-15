@@ -6,7 +6,9 @@ import {
   getCustomers,
   // Setup import Transactions
   getTransactions,
-  // getGeography,
+  // Setup import Geography
+  getGeography,
+  
 } from "../controllers/client.js";
 
 const router = express.Router();
@@ -17,7 +19,7 @@ router.get("/products", getProducts);
 router.get("/customers", getCustomers);
 // Setup router to getTransactions
 router.get("/transactions", getTransactions);
-
-// router.get("/geography", getGeography);
+// Setup router to getGeography
+router.get("/geography", getGeography);
 
 export default router;
