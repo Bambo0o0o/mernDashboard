@@ -604,6 +604,17 @@ git push -u origin main
 
 ## Dashboard Page 6:09:21
 
+   <!-- Backend setup -->
+1) Go to {general.js} in routes folder
+   1) Import getDashboardStats
+   2) Create router for getDashboardStats
+2) Go to {general.js} in controllers folder
+   1) Import OverallStat, Transaction
+   2) Create callBack function for getDashboardStats
+
+   <!-- Frontend Setup  -->
+
+
 ## Deployment on Render.com 6:44:05
 
 ## Completed and Deployed MERN Stack Admin Dashboard 6:57:57
