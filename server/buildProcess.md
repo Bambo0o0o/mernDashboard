@@ -693,6 +693,8 @@ git push -u origin main
             - Key : REACT_APP_BASE_URL
             - value (URL created from Render) : Get from create backend
             - On Web service click : Create Static Site
+         ***Error "not found /build directory" come from .gitignore cancel this folder update to Github : Solve by Adding build command on render as "npm install && npm run build"***
+         9) Getting render frontend web : <https://admin-frontend-w9kw.onrender.com>
 
 ## Completed and Deployed MERN Stack Admin Dashboard 6:57:57
 
