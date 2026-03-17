@@ -62,6 +62,8 @@ app.use("/sales", salesRoutes);
 
 /* Mongoose Setup */
 const PORT = process.env.PORT || 9000;                  //process.env. allow us to acces .env file
+
+console.log(process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
